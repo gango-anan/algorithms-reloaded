@@ -8,4 +8,9 @@ class MyArray {
     return this.data[index];
   }
 
+  push(item) {
+    this.data[this.length] = item;
+    this.length += 1;
+    return this.length;
+  }
 }
