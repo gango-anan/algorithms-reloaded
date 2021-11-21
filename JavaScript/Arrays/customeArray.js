@@ -13,4 +13,11 @@ class MyArray {
     this.length += 1;
     return this.length;
   }
+
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length -= 1;
+    return lastItem;
+  }
 }
