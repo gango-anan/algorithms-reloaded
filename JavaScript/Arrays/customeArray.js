@@ -4,5 +4,8 @@ class MyArray {
     this.data = {};
   }
 
+  get(index) {
+    return this.data[index];
+  }
 
 }
