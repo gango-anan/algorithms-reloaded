@@ -17,6 +17,17 @@ def first_repeated_element(arr)
   nil
 end
 
+def first_repeated_element_two(array)
+  freq_hash = {}
+
+  array.each do |elem|
+    return elem if freq_hash[elem]
+    freq_hash[elem] = 1
+  end
+
+  nil
+end
+
 describe 'first_repeated_element' do
   it 'returns the first repeated element from an array' do
     arr_one = [5, 3, 4, 5, 3, 1]
