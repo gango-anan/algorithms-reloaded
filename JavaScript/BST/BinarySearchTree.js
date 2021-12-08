@@ -34,10 +34,22 @@ class BinarySearchTree {
       }
     }
   }
-
-  lookUp(value) {
-
-  }
 }
 
 const tree = new BinarySearchTree();
+
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.left === null ? null : traverse(node.left);
+
+  return tree;
+}
+
+// tree.insert(9);
+// tree.insert(20);
+// tree.insert(25);
+// tree.insert(5);
+// tree.insert(12);
+// tree.insert(11);
+// tree.insert(14);
