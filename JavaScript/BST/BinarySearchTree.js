@@ -34,22 +34,28 @@ class BinarySearchTree {
       }
     }
   }
-}
 
-const tree = new BinarySearchTree();
+  lookUp(value) {
+
+  }
+}
 
 function traverse(node) {
   const tree = { value: node.value };
   tree.left = node.left === null ? null : traverse(node.left);
-  tree.right = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
 
   return tree;
 }
 
-// tree.insert(9);
-// tree.insert(20);
-// tree.insert(25);
-// tree.insert(5);
-// tree.insert(12);
-// tree.insert(11);
-// tree.insert(14);
+const tree = new BinarySearchTree();
+
+tree.insert(9);
+tree.insert(20);
+tree.insert(25);
+tree.insert(5);
+tree.insert(12);
+tree.insert(11);
+tree.insert(14);
+
+JSON.stringify(traverse(tree.root));
