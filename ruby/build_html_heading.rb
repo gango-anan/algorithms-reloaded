@@ -3,7 +3,7 @@ require 'rspec'
 def title_creator(title)
   heading = %w[h1 title_placeholder h1]
   heading[1] = title
-  '<%s>%s<%s>' % heading
+  '<%s>%s<%s>' % heading #Advance form of string interpolation that allows you to add a collection into strings
 end
 
 describe 'HTML h1 converter' do
