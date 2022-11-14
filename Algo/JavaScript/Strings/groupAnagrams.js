@@ -1,3 +1,6 @@
+// Time complexity O(w*n*log(n)), Space complexity O(wn)
+// where w is the length of the word and n is the number of the words
+
 function groupAnagrams(words) {
 	const grouped = {};
 	for (const word of words) {

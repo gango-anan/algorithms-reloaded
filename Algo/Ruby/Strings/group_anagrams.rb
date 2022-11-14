@@ -1,33 +1,12 @@
-# def group_anagrams(words)
-#     sorted_words = words.map { |word| word.split("").sort.join("") }.sort
-#     grouped_words = []
-#     i = 0
-#     j = i + 1
-#     counter = 0
-#     while i < sorted_words.length - 1
-#         grouped_words << [sorted_words[i]]
-#         while j < sorted_words.length
-#             if grouped_words[counter].include?(sorted_words[j])
-#                 grouped_words[counter] << sorted_words[j]
-#                 j += 1
-#             else
-#                 break
-#             end
-#         end
-#         i = j 
-#         j += 1
-#         counter += 1
-#     end
-
-#     grouped_words
-# end
+# Time complexity O(w*n*log(n)), Space complexity O(wn)
+# where w is the length of the word and n is the number of the words
 
 def group_anagrams(words)
     grouped_words = {}
     words.each do |word|
         key = word.chars.sort.join
 
-        if grouped_words.keys.include?(key)
+        if grouped_words.has_key?(key)
             grouped_words[key] = grouped_words[key] << word
         else
             grouped_words[key] = [word]
