@@ -45,5 +45,8 @@ function waterArea(heights) {
 	return totalWaterHeld;
 }
 
-array = [0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3];
-waterArea(array);
+const array = [0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3];
+console.log(waterArea(array)); //Output: 48
+
+const heights = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
+console.log(waterArea(heights)); //Output: 6
